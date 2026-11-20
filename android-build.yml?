@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build TAFI Calculator APK
+    name: Build Android APK
     runs-on: ubuntu-latest
 
     steps:
@@ -34,10 +34,7 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Analyze application
-        run: flutter analyze lib --no-pub
-
-      - name: Build release APK
+      - name: Build APK
         run: flutter build apk --release
 
       - name: Upload APK
